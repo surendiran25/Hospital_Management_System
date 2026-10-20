@@ -1,0 +1,135 @@
+/* Login page. Every class starts with lg- so it won't clash with App.css */
+.lg-page,
+.lg-page * {
+  box-sizing: border-box;
+}
+
+.lg-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f4f7fa;
+  color: #1c2b3a;
+  font-family: inherit;
+}
+
+.lg-brand {
+  background: linear-gradient(160deg, #12395f 0%, #0c2a47 100%);
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.lg-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.lg-brand h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 2rem 0 0;
+  max-width: 16ch;
+}
+.lg-brand p {
+  margin: 0;
+  max-width: 34ch;
+  color: #c6d9ec;
+  line-height: 1.55;
+}
+
+.lg-form-wrap {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+.lg-form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.lg-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+.lg-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+.lg-form input {
+  width: 100%;
+  font: inherit;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit;
+}
+.lg-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.lg-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.lg-primary,
+.lg-ghost {
+  font: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.7rem 1.1rem;
+}
+.lg-primary {
+  background: #1f86d6;
+  color: #fff;
+}
+.lg-primary:hover:not(:disabled) {
+  background: #1769ab;
+}
+.lg-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.lg-ghost {
+  background: transparent;
+  color: #12395f;
+  border-color: #dbe3ec;
+}
+.lg-ghost:hover {
+  background: #f4f7fa;
+}
+
+.lg-error {
+  min-height: 1.3rem;
+  margin: 0.3rem 0 0.6rem;
+  color: #b3261e;
+  font-size: 0.9rem;
+}
+
+.lg-form input:focus-visible,
+.lg-primary:focus-visible,
+.lg-ghost:focus-visible {
+  outline: 3px solid rgba(31, 134, 214, 0.45);
+  outline-offset: 2px;
+}
+
+@media (max-width: 820px) {
+  .lg-page {
+    grid-template-columns: 1fr;
+  }
+  .lg-brand {
+    padding: 2rem 1.5rem;
+  }
+  .lg-brand h1 {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
+}
